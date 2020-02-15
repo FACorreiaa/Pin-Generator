@@ -1,3 +1,14 @@
-import * as React from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './store/configStore';
+import AppRouter from './router';
 
-export default () => <div>oi</div>;
+const App: React.FC = () => {
+  return (
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
+  );
+};
+
+export default App;
